@@ -1,20 +1,32 @@
 <template>
   <section class="recipes">
-    <article class="recipe">
-      <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
-      <h1>Title</h1>
-      <p>Some usefull text</p>
-    </article>
+    <nuxt-link :to="'/recipes/' + id">
+
+      <article class="recipe">
+        <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
+        <h1>Title</h1>
+        <p>Some usefull text</p>
+      </article>
+
+    </nuxt-link>
   </section>
 </template>
 
 <script>
+  import NuxtLink from "../.nuxt/components/nuxt-link";
+
   export default {
-    props: ["thumbnail", "title", "previewText"]
+    components: {NuxtLink},
+    props: ["thumbnail", "title", "previewText", "id"]
   }
 </script>
 
 <style scope>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .recipes {
     display: flex;
     flex-flow: row wrap; /*responsive style*/
