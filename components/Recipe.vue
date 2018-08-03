@@ -1,13 +1,11 @@
 <template>
   <section class="recipes">
     <nuxt-link :to="'/recipes/' + id">
-
       <article class="recipe">
         <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
         <h1>Title</h1>
         <p>Some usefull text</p>
       </article>
-
     </nuxt-link>
   </section>
 </template>
