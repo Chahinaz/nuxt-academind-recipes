@@ -3,8 +3,8 @@
     <nuxt-link :to="'/recipes/' + id">
       <article class="recipe">
         <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
-        <h1>Title</h1>
-        <p>Some usefull text</p>
+        <h1>{{ title }}</h1>
+        <p>{{ previewText }}</p>
       </article>
     </nuxt-link>
   </section>
